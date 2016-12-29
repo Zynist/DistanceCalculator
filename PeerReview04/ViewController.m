@@ -64,10 +64,10 @@
 }
 - (void)processResponse:(id)response withLabel:(UILabel*) label {
     NSNull *badResponse = [NSNull null];
-    if (response == badResponse)
-        return;
+    float distanceInM = 0.0;
+    if (response != badResponse) // only use valid responses
+        distanceInM = [response floatValue];
     
-    float distanceInM = [response floatValue];
     float distanceInKm = distanceInM/1000;
     float distanceInMiles = distanceInM/1609.34;
     
