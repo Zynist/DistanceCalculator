@@ -1,1 +1,0 @@
-../../../DistanceGetter/Pod/Classes/DGDistanceRequest.h
