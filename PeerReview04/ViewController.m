@@ -87,10 +87,11 @@
         // if our self.distances array exists, use it, otherwise
         // use a float value of 0.0.
         id resp;
-        if (self.distances != nil)
+        if (self.distances != nil) {
             resp = self.distances[i];
-        else
+        } else {
             resp = [[NSNumber alloc] initWithFloat: 0.0];
+        }
         [self processResponse:resp withLabel:labels[i]];
     }
 }
